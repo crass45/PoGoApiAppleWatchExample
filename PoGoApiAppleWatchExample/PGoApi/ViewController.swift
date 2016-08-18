@@ -128,7 +128,6 @@ class ViewController: UIViewController, PGoAuthDelegate, PGoApiDelegate, WCSessi
             
             let altitude = Double(CLLocation(latitude: userLocation.latitude, longitude: userLocation.longitude).altitude)
             
-            print(altitude)
             request.setLocation(userLocation.latitude, longitude: userLocation.longitude, altitude: 1)
             NSNotificationCenter.defaultCenter().postNotificationName(UPDATE_LOCATION_NOTIFICATION, object: nil)
             if canSimulateAppStart {
@@ -157,7 +156,12 @@ class ViewController: UIViewController, PGoAuthDelegate, PGoApiDelegate, WCSessi
         print("Starting simulation...")
         
         // Init with auth
-        request = PGoApiRequest(auth: auth)
+        if acountTypeSegment.selectedSegmentIndex == 0 {
+            request = PGoApiRequest(auth: auth)
+        }
+        else{
+            request = PGoApiRequest(auth: gogleAuth)
+        }
         
         // Simulate the start
         canSimulateAppStart = true
@@ -176,7 +180,6 @@ class ViewController: UIViewController, PGoAuthDelegate, PGoApiDelegate, WCSessi
             request.makeRequest(.GetMapObjects, delegate: self)
             
         }
-        
         if (intent == .EncounterPokemon){
             print("CAZANDO POKEMON!")
             print(response.response)
@@ -249,6 +252,8 @@ class ViewController: UIViewController, PGoAuthDelegate, PGoApiDelegate, WCSessi
         }
         
         if (intent == .GetMapObjects) {
+            print(response)
+            print(response.subresponses)
             if response.subresponses.count > 0 {
                 if let r = response.subresponses[0] as? Pogoprotos.Networking.Responses.GetMapObjectsResponse {
                     
@@ -366,7 +371,7 @@ class ViewController: UIViewController, PGoAuthDelegate, PGoApiDelegate, WCSessi
             
             let username = tfUsername.text
             let password = tfPass.text
-            auth.login(withUsername: username!, withPassword: password!)
+            self.gogleAuth.login(withUsername: username!, withPassword: password!)
             
         }
         
