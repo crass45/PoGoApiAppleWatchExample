@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PGoApi_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EJEMPLO API" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPT-vE-mQZ">
+                                <rect key="frame" x="220" y="20" width="160" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fCw-H3-Dtz">
+                                <rect key="frame" x="242" y="77" width="117" height="29"/>
+                                <segments>
+                                    <segment title="PTC"/>
+                                    <segment title="Google"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iit-pP-xvg">
+                                <rect key="frame" x="60" y="129" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bx-Ge-sFr">
+                                <rect key="frame" x="60" y="167" width="480" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZw-od-Z4O">
+                                <rect key="frame" x="268" y="213" width="65" height="45"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="logIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NQE-Qp-TQN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EZw-od-Z4O" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="083-XP-80G"/>
+                            <constraint firstItem="Iit-pP-xvg" firstAttribute="top" secondItem="fCw-H3-Dtz" secondAttribute="bottom" constant="24" id="0Ld-rr-DJO"/>
+                            <constraint firstItem="Iit-pP-xvg" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5gC-Kp-dlb"/>
+                            <constraint firstItem="1bx-Ge-sFr" firstAttribute="top" secondItem="Iit-pP-xvg" secondAttribute="bottom" constant="8" id="BTc-Dt-85k"/>
+                            <constraint firstItem="1bx-Ge-sFr" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="EGf-GI-Gsr"/>
+                            <constraint firstItem="EZw-od-Z4O" firstAttribute="top" secondItem="1bx-Ge-sFr" secondAttribute="bottom" constant="16" id="Vqm-JB-ZGE"/>
+                            <constraint firstItem="fCw-H3-Dtz" firstAttribute="top" secondItem="fPT-vE-mQZ" secondAttribute="bottom" constant="24" id="Yrw-eo-sGZ"/>
+                            <constraint firstItem="1bx-Ge-sFr" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lmq-EN-S8f"/>
+                            <constraint firstItem="fPT-vE-mQZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="nga-ja-ECK"/>
+                            <constraint firstItem="fPT-vE-mQZ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="rYa-xz-eTf"/>
+                            <constraint firstItem="fCw-H3-Dtz" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tSb-L1-AJW"/>
+                            <constraint firstItem="Iit-pP-xvg" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="uEi-4L-bfw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="acountTypeSegment" destination="fCw-H3-Dtz" id="6TX-IH-CRd"/>
+                        <outlet property="tfPass" destination="1bx-Ge-sFr" id="oK0-tP-tMU"/>
+                        <outlet property="tfUsername" destination="Iit-pP-xvg" id="Gfx-VE-ce4"/>
+                        <segue destination="dgI-ed-71I" kind="show" identifier="mainSegue" id="fI3-Ia-leU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="391" y="337"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="1rh-aV-HLo">
+            <objects>
+                <viewController id="Zau-F1-T1c" customClass="LogsViewController" customModule="PGoApi_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RXW-MH-gEi"/>
+                        <viewControllerLayoutGuide type="bottom" id="MoI-pK-5zY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZGi-L3-Kh6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kv7-G6-W6Z">
+                                <rect key="frame" x="20" y="20" width="560" height="523"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MoI-pK-5zY" firstAttribute="top" secondItem="Kv7-G6-W6Z" secondAttribute="bottom" constant="8" id="A8g-Ql-1aC"/>
+                            <constraint firstItem="Kv7-G6-W6Z" firstAttribute="top" secondItem="RXW-MH-gEi" secondAttribute="bottom" id="b8m-v1-gRZ"/>
+                            <constraint firstItem="Kv7-G6-W6Z" firstAttribute="trailing" secondItem="ZGi-L3-Kh6" secondAttribute="trailingMargin" id="sqm-PR-VH4"/>
+                            <constraint firstItem="Kv7-G6-W6Z" firstAttribute="leading" secondItem="ZGi-L3-Kh6" secondAttribute="leadingMargin" id="uiV-m6-enG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="PQH-HZ-OQs"/>
+                    <connections>
+                        <outlet property="textView" destination="Kv7-G6-W6Z" id="vYx-PI-WLo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ipd-OP-u4W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821" y="669"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="bb3-aZ-5Jp">
+            <objects>
+                <viewController id="P4u-vW-VN6" customClass="MapViewController" customModule="PGoApi_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sda-cL-cnz"/>
+                        <viewControllerLayoutGuide type="bottom" id="l7G-c1-GCG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cpp-KG-rh4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satellite" translatesAutoresizingMaskIntoConstraints="NO" id="xyn-ny-KQG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xyn-ny-KQG" firstAttribute="top" secondItem="cpp-KG-rh4" secondAttribute="topMargin" id="1Kb-d3-VTt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xyn-ny-KQG" secondAttribute="trailing" constant="-20" id="7TG-J6-Jvt"/>
+                            <constraint firstItem="xyn-ny-KQG" firstAttribute="bottom" secondItem="cpp-KG-rh4" secondAttribute="bottomMargin" id="fHk-U4-28h"/>
+                            <constraint firstItem="xyn-ny-KQG" firstAttribute="leading" secondItem="cpp-KG-rh4" secondAttribute="leadingMargin" constant="-20" id="jZK-kU-vf0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="I9A-rx-2UH"/>
+                    <connections>
+                        <outlet property="mapa" destination="xyn-ny-KQG" id="RuH-5n-vHV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9qw-7t-2UE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821" y="-131"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="QnD-kN-RjU">
+            <objects>
+                <tabBarController id="dgI-ed-71I" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="PX9-aq-KPp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="P4u-vW-VN6" kind="relationship" relationship="viewControllers" id="VQt-TL-xTj"/>
+                        <segue destination="Zau-F1-T1c" kind="relationship" relationship="viewControllers" id="vo0-1D-4kh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rt0-ZT-mKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="337"/>
+        </scene>
+    </scenes>
+</document>

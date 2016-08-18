@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="Zxq-bY-g2C">
+            <objects>
+                <notificationController id="S5Z-7d-hyS">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="2" id="L8G-Ii-Xu8"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" id="bRS-Nd-eeg"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="L8G-Ii-Xu8" id="rtw-Mq-KB5"/>
+                        <segue destination="udr-cc-5jT" kind="relationship" relationship="dynamicNotificationInterface" id="dfV-tw-YeJ"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="253" y="39"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PokGoWatch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="k22-jF-2lj">
+                            <items>
+                                <label alignment="left" text="Pokemon Go Watch Test" id="HMZ-GY-w4k"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="aCk-h0-wDA">
+                            <items>
+                                <label alignment="center" text="Que utilizamos?" textAlignment="center" id="4jW-rF-FAF"/>
+                                <button width="1" alignment="left" title="PokeBall" id="WNV-Mc-bz2">
+                                    <connections>
+                                        <action selector="lanzaPokeball" destination="AgC-eL-Hgc" id="20a-Jo-FnK"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="SuperBall" id="OER-Ub-1pT">
+                                    <connections>
+                                        <action selector="lanzaSuperBall" destination="AgC-eL-Hgc" id="xuD-jp-LQi"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="UltraBall" id="sOb-xI-0GM">
+                                    <connections>
+                                        <action selector="lanzaUltraBall" destination="AgC-eL-Hgc" id="9TZ-hJ-p1Q"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="grupoBolas" destination="aCk-h0-wDA" id="HC2-5v-luz"/>
+                        <outlet property="grupoSplash" destination="k22-jF-2lj" id="o1p-rt-J3v"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="262" y="355"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="vAL-hu-kXW">
+            <objects>
+                <controller id="udr-cc-5jT" customClass="NotificationController" customModule="PokGoWatch_Extension">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="2" id="XWD-Sq-Ep9"/>
+                        <imageView alignment="center" id="RSv-Wz-o1w"/>
+                    </items>
+                    <connections>
+                        <outlet property="imagen" destination="RSv-Wz-o1w" id="gpt-FF-5y8"/>
+                        <outlet property="label" destination="XWD-Sq-Ep9" id="70f-HG-dUA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="731" y="23"/>
+        </scene>
+    </scenes>
+</document>

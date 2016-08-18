@@ -1,0 +1,22 @@
+use_frameworks!
+
+
+def shared_pods
+    pod 'PGoApi', :git => 'https://github.com/lsapan/pgoapi-swift', :branch => 'master'
+    pod 'ProtocolBuffers-Swift', :git => 'https://github.com/alexeyxo/protobuf-swift', :branch => 'ProtoBuf3.0-Swift2.0'
+end
+
+target 'PGoApi_Example' do
+    shared_pods
+
+end
+
+
+target 'PokGoWatch' do
+    shared_pods
+end
+
+
+target 'PokGoWatch Extension' do
+    shared_pods
+end

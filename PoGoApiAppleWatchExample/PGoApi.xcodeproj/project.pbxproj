@@ -1,0 +1,1038 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		888325201D6337BC00F8805A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8883251F1D6337BC00F8805A /* MapViewController.swift */; };
+		888325231D6337EF00F8805A /* PokemonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325211D6337EF00F8805A /* PokemonAnnotation.swift */; };
+		888325241D6337EF00F8805A /* TrainerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325221D6337EF00F8805A /* TrainerAnnotation.swift */; };
+		888325261D63440200F8805A /* FortAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325251D63440200F8805A /* FortAnnotation.swift */; };
+		888325281D63603B00F8805A /* sm.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 888325271D63603B00F8805A /* sm.gpx */; };
+		888325531D6368BA00F8805A /* SpawnPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325521D6368BA00F8805A /* SpawnPointAnnotation.swift */; };
+		8883255A1D63BDBE00F8805A /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 888325581D63BDBE00F8805A /* Interface.storyboard */; };
+		8883255C1D63BDBE00F8805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8883255B1D63BDBE00F8805A /* Assets.xcassets */; };
+		888325631D63BDBE00F8805A /* PokGoWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 888325621D63BDBE00F8805A /* PokGoWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		888325681D63BDBE00F8805A /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325671D63BDBE00F8805A /* InterfaceController.swift */; };
+		8883256A1D63BDBE00F8805A /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325691D63BDBE00F8805A /* ExtensionDelegate.swift */; };
+		8883256C1D63BDBE00F8805A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8883256B1D63BDBE00F8805A /* Assets.xcassets */; };
+		888325701D63BDBE00F8805A /* PokGoWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 888325561D63BDBE00F8805A /* PokGoWatch.app */; };
+		889740331D65D62B00AA5227 /* Pods_PGoApi_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889740321D65D62B00AA5227 /* Pods_PGoApi_Example.framework */; };
+		889740351D65D9CE00AA5227 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889740341D65D9CE00AA5227 /* CoreLocation.framework */; };
+		88B256DC1D63D59700676555 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B256DB1D63D59700676555 /* NotificationController.swift */; };
+		88E130BD1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 88E130BC1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx */; };
+		88E130BF1D64D15F00C14710 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E130BE1D64D15F00C14710 /* LogsViewController.swift */; };
+		AB53B47BC6DE73D3872097E2 /* Pods_PGoApi_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68719A6E9BEB3505427181EB /* Pods_PGoApi_Tests.framework */; };
+		D5375C16787C4D7AA36BBEDC /* Pods_PGoApi_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EA2C22B2339E6AEB2C1C4E /* Pods_PGoApi_Example.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = PGoApi;
+		};
+		888325641D63BDBE00F8805A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 888325611D63BDBE00F8805A;
+			remoteInfo = "PokGoWatch Extension";
+		};
+		8883256E1D63BDBE00F8805A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 888325551D63BDBE00F8805A;
+			remoteInfo = PokGoWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		888325511D63612300F8805A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				888325701D63BDBE00F8805A /* PokGoWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888325741D63BDBE00F8805A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				888325631D63BDBE00F8805A /* PokGoWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		37629CDE1FF91C1BC75F9C04 /* Pods-PGoApi_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Example/Pods-PGoApi_Example.release.xcconfig"; sourceTree = "<group>"; };
+		55EA2C22B2339E6AEB2C1C4E /* Pods_PGoApi_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PGoApi_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* PGoApi_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGoApi_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		607FACE51AFB9204008FA782 /* PGoApi_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGoApi_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		61E9BAB4200D7A55068D41C7 /* Pods-PGoApi_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Example/Pods-PGoApi_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		66997A5960E5C0884BC1CE4E /* Pods-PGoApi_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		68719A6E9BEB3505427181EB /* Pods_PGoApi_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PGoApi_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		886CD0111D65D07700DB7901 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/PGoApi-ezqzantelmigkvgjyofalhqbdrzs/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		8883251F1D6337BC00F8805A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		888325211D6337EF00F8805A /* PokemonAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonAnnotation.swift; sourceTree = "<group>"; };
+		888325221D6337EF00F8805A /* TrainerAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainerAnnotation.swift; sourceTree = "<group>"; };
+		888325251D63440200F8805A /* FortAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortAnnotation.swift; sourceTree = "<group>"; };
+		888325271D63603B00F8805A /* sm.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sm.gpx; sourceTree = "<group>"; };
+		888325521D6368BA00F8805A /* SpawnPointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpawnPointAnnotation.swift; sourceTree = "<group>"; };
+		888325561D63BDBE00F8805A /* PokGoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokGoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		888325591D63BDBE00F8805A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8883255B1D63BDBE00F8805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8883255D1D63BDBE00F8805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		888325621D63BDBE00F8805A /* PokGoWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PokGoWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		888325671D63BDBE00F8805A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		888325691D63BDBE00F8805A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		8883256B1D63BDBE00F8805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8883256D1D63BDBE00F8805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		889740231D65D10300AA5227 /* PGoApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGoApi.framework; path = "../../Library/Developer/Xcode/DerivedData/PGoApi-ezqzantelmigkvgjyofalhqbdrzs/Build/Products/Debug-iphoneos/PGoApi/PGoApi.framework"; sourceTree = "<group>"; };
+		889740321D65D62B00AA5227 /* Pods_PGoApi_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PGoApi_Example.framework; path = "Pods/../build/Debug-iphoneos/Pods_PGoApi_Example.framework"; sourceTree = "<group>"; };
+		889740341D65D9CE00AA5227 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		88B256DB1D63D59700676555 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		88E130BC1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ruta-jardines-del-buen-retiro.gpx"; sourceTree = "<group>"; };
+		88E130BE1D64D15F00C14710 /* LogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		BA43FE89BBE5B12039D64BD7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E6DADFDBA44A43D7C59198E9 /* Pods-PGoApi_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		F3C39E33D25519A2548C9BC1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		607FACCD1AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889740331D65D62B00AA5227 /* Pods_PGoApi_Example.framework in Frameworks */,
+				D5375C16787C4D7AA36BBEDC /* Pods_PGoApi_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACE21AFB9204008FA782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB53B47BC6DE73D3872097E2 /* Pods_PGoApi_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62812CB13110950FC8189AB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8883255F1D63BDBE00F8805A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889740351D65D9CE00AA5227 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		607FACC71AFB9204008FA782 = {
+			isa = PBXGroup;
+			children = (
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* PoGoiPhone */,
+				607FACE81AFB9204008FA782 /* Tests */,
+				888325571D63BDBE00F8805A /* PokGoWatch */,
+				888325661D63BDBE00F8805A /* PokGoWatch Extension */,
+				607FACD11AFB9204008FA782 /* Products */,
+				C3B6DA65F48850C2BDEF9748 /* Pods */,
+				A3ECF49FD671BDB3FBFD32C3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		607FACD11AFB9204008FA782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD01AFB9204008FA782 /* PGoApi_Example.app */,
+				607FACE51AFB9204008FA782 /* PGoApi_Tests.xctest */,
+				888325561D63BDBE00F8805A /* PokGoWatch.app */,
+				888325621D63BDBE00F8805A /* PokGoWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		607FACD21AFB9204008FA782 /* PoGoiPhone */ = {
+			isa = PBXGroup;
+			children = (
+				886CD0101D65CD0500DB7901 /* Routes */,
+				886CD00F1D65CCF100DB7901 /* Annotations */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
+				8883251F1D6337BC00F8805A /* MapViewController.swift */,
+				88E130BE1D64D15F00C14710 /* LogsViewController.swift */,
+			);
+			name = PoGoiPhone;
+			path = PGoApi;
+			sourceTree = "<group>";
+		};
+		607FACD31AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD41AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACE81AFB9204008FA782 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		607FACE91AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEA1AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				BA43FE89BBE5B12039D64BD7 /* README.md */,
+				F3C39E33D25519A2548C9BC1 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		886CD00F1D65CCF100DB7901 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				888325521D6368BA00F8805A /* SpawnPointAnnotation.swift */,
+				888325211D6337EF00F8805A /* PokemonAnnotation.swift */,
+				888325221D6337EF00F8805A /* TrainerAnnotation.swift */,
+				888325251D63440200F8805A /* FortAnnotation.swift */,
+			);
+			name = Annotations;
+			sourceTree = "<group>";
+		};
+		886CD0101D65CD0500DB7901 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				88E130BC1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx */,
+				888325271D63603B00F8805A /* sm.gpx */,
+			);
+			name = Routes;
+			sourceTree = "<group>";
+		};
+		888325571D63BDBE00F8805A /* PokGoWatch */ = {
+			isa = PBXGroup;
+			children = (
+				888325581D63BDBE00F8805A /* Interface.storyboard */,
+				8883255B1D63BDBE00F8805A /* Assets.xcassets */,
+				8883255D1D63BDBE00F8805A /* Info.plist */,
+			);
+			path = PokGoWatch;
+			sourceTree = "<group>";
+		};
+		888325661D63BDBE00F8805A /* PokGoWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				888325671D63BDBE00F8805A /* InterfaceController.swift */,
+				888325691D63BDBE00F8805A /* ExtensionDelegate.swift */,
+				8883256B1D63BDBE00F8805A /* Assets.xcassets */,
+				8883256D1D63BDBE00F8805A /* Info.plist */,
+				88B256DB1D63D59700676555 /* NotificationController.swift */,
+			);
+			path = "PokGoWatch Extension";
+			sourceTree = "<group>";
+		};
+		A3ECF49FD671BDB3FBFD32C3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				889740341D65D9CE00AA5227 /* CoreLocation.framework */,
+				889740321D65D62B00AA5227 /* Pods_PGoApi_Example.framework */,
+				889740231D65D10300AA5227 /* PGoApi.framework */,
+				886CD0111D65D07700DB7901 /* Alamofire.framework */,
+				68719A6E9BEB3505427181EB /* Pods_PGoApi_Tests.framework */,
+				55EA2C22B2339E6AEB2C1C4E /* Pods_PGoApi_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3B6DA65F48850C2BDEF9748 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61E9BAB4200D7A55068D41C7 /* Pods-PGoApi_Example.debug.xcconfig */,
+				37629CDE1FF91C1BC75F9C04 /* Pods-PGoApi_Example.release.xcconfig */,
+				66997A5960E5C0884BC1CE4E /* Pods-PGoApi_Tests.debug.xcconfig */,
+				E6DADFDBA44A43D7C59198E9 /* Pods-PGoApi_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		607FACCF1AFB9204008FA782 /* PGoApi_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PGoApi_Example" */;
+			buildPhases = (
+				C4B5B206B76C1BC8D0D0B04E /* 📦 Check Pods Manifest.lock */,
+				D90B0584764DE5F6944F9AC7 /* [CP] Check Pods Manifest.lock */,
+				607FACCC1AFB9204008FA782 /* Sources */,
+				607FACCD1AFB9204008FA782 /* Frameworks */,
+				607FACCE1AFB9204008FA782 /* Resources */,
+				E4F924182129C7ED98D66BB5 /* [CP] Embed Pods Frameworks */,
+				5DC70CA8238918BB095821DE /* [CP] Copy Pods Resources */,
+				888325511D63612300F8805A /* Embed Watch Content */,
+				7B7E68027A78F46A82E40349 /* 📦 Embed Pods Frameworks */,
+				617CC89DF23740660239B975 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8883256F1D63BDBE00F8805A /* PBXTargetDependency */,
+			);
+			name = PGoApi_Example;
+			productName = PGoApi;
+			productReference = 607FACD01AFB9204008FA782 /* PGoApi_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		607FACE41AFB9204008FA782 /* PGoApi_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PGoApi_Tests" */;
+			buildPhases = (
+				1A660253EA57D0F067D78901 /* 📦 Check Pods Manifest.lock */,
+				DDDBDDC8BAAE91523635E6DC /* [CP] Check Pods Manifest.lock */,
+				607FACE11AFB9204008FA782 /* Sources */,
+				607FACE21AFB9204008FA782 /* Frameworks */,
+				607FACE31AFB9204008FA782 /* Resources */,
+				03B3333A23A87574CE8CB0F0 /* [CP] Embed Pods Frameworks */,
+				DC368D46D1EED499DC04C2B3 /* [CP] Copy Pods Resources */,
+				53A0886B3A82CB846637A81C /* 📦 Embed Pods Frameworks */,
+				0CC66C3020E34A7E2C1AB97C /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
+			);
+			name = PGoApi_Tests;
+			productName = Tests;
+			productReference = 607FACE51AFB9204008FA782 /* PGoApi_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		888325551D63BDBE00F8805A /* PokGoWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 888325751D63BDBE00F8805A /* Build configuration list for PBXNativeTarget "PokGoWatch" */;
+			buildPhases = (
+				888325541D63BDBE00F8805A /* Resources */,
+				888325741D63BDBE00F8805A /* Embed App Extensions */,
+				62812CB13110950FC8189AB7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				888325651D63BDBE00F8805A /* PBXTargetDependency */,
+			);
+			name = PokGoWatch;
+			productName = PokGoWatch;
+			productReference = 888325561D63BDBE00F8805A /* PokGoWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		888325611D63BDBE00F8805A /* PokGoWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 888325711D63BDBE00F8805A /* Build configuration list for PBXNativeTarget "PokGoWatch Extension" */;
+			buildPhases = (
+				8883255E1D63BDBE00F8805A /* Sources */,
+				8883255F1D63BDBE00F8805A /* Frameworks */,
+				888325601D63BDBE00F8805A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PokGoWatch Extension";
+			productName = "PokGoWatch Extension";
+			productReference = 888325621D63BDBE00F8805A /* PokGoWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		607FACC81AFB9204008FA782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = CocoaPods;
+				TargetAttributes = {
+					607FACCF1AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = ENED2A5FSX;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					607FACE41AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 607FACCF1AFB9204008FA782;
+					};
+					888325551D63BDBE00F8805A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = ENED2A5FSX;
+					};
+					888325611D63BDBE00F8805A = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "PGoApi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				607FACCF1AFB9204008FA782 /* PGoApi_Example */,
+				607FACE41AFB9204008FA782 /* PGoApi_Tests */,
+				888325551D63BDBE00F8805A /* PokGoWatch */,
+				888325611D63BDBE00F8805A /* PokGoWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		607FACCE1AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				888325281D63603B00F8805A /* sm.gpx in Resources */,
+				88E130BD1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACE31AFB9204008FA782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888325541D63BDBE00F8805A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8883255C1D63BDBE00F8805A /* Assets.xcassets in Resources */,
+				8883255A1D63BDBE00F8805A /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888325601D63BDBE00F8805A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8883256C1D63BDBE00F8805A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03B3333A23A87574CE8CB0F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0CC66C3020E34A7E2C1AB97C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A660253EA57D0F067D78901 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		53A0886B3A82CB846637A81C /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DC70CA8238918BB095821DE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Example/Pods-PGoApi_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		617CC89DF23740660239B975 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Example/Pods-PGoApi_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B7E68027A78F46A82E40349 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Example/Pods-PGoApi_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4B5B206B76C1BC8D0D0B04E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D90B0584764DE5F6944F9AC7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC368D46D1EED499DC04C2B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DDDBDDC8BAAE91523635E6DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E4F924182129C7ED98D66BB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Example/Pods-PGoApi_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		607FACCC1AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				888325231D6337EF00F8805A /* PokemonAnnotation.swift in Sources */,
+				88E130BF1D64D15F00C14710 /* LogsViewController.swift in Sources */,
+				888325201D6337BC00F8805A /* MapViewController.swift in Sources */,
+				888325531D6368BA00F8805A /* SpawnPointAnnotation.swift in Sources */,
+				888325261D63440200F8805A /* FortAnnotation.swift in Sources */,
+				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				888325241D6337EF00F8805A /* TrainerAnnotation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		607FACE11AFB9204008FA782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8883255E1D63BDBE00F8805A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8883256A1D63BDBE00F8805A /* ExtensionDelegate.swift in Sources */,
+				888325681D63BDBE00F8805A /* InterfaceController.swift in Sources */,
+				88B256DC1D63D59700676555 /* NotificationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* PGoApi_Example */;
+			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
+		};
+		888325651D63BDBE00F8805A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 888325611D63BDBE00F8805A /* PokGoWatch Extension */;
+			targetProxy = 888325641D63BDBE00F8805A /* PBXContainerItemProxy */;
+		};
+		8883256F1D63BDBE00F8805A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 888325551D63BDBE00F8805A /* PokGoWatch */;
+			targetProxy = 8883256E1D63BDBE00F8805A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDA1AFB9204008FA782 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDF1AFB9204008FA782 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		888325581D63BDBE00F8805A /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				888325591D63BDBE00F8805A /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		607FACED1AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		607FACEE1AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		607FACF01AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61E9BAB4200D7A55068D41C7 /* Pods-PGoApi_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PGoApi",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ProtocolBuffers-Swift",
+				);
+				INFOPLIST_FILE = PGoApi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.smartsoft.PGoApi-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		607FACF11AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37629CDE1FF91C1BC75F9C04 /* Pods-PGoApi_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/PGoApi",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ProtocolBuffers-Swift",
+				);
+				INFOPLIST_FILE = PGoApi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.smartsoft.PGoApi-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		607FACF31AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66997A5960E5C0884BC1CE4E /* Pods-PGoApi_Tests.debug.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		607FACF41AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6DADFDBA44A43D7C59198E9 /* Pods-PGoApi_Tests.release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		888325721D63BDBE00F8805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "PokGoWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "es.smartsoft.PGoApi-Example.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		888325731D63BDBE00F8805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = "PokGoWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "es.smartsoft.PGoApi-Example.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		888325761D63BDBE00F8805A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = PokGoWatch_Extension;
+				INFOPLIST_FILE = PokGoWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.smartsoft.PGoApi-Example.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		888325771D63BDBE00F8805A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = PokGoWatch_Extension;
+				INFOPLIST_FILE = PokGoWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "es.smartsoft.PGoApi-Example.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "PGoApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PGoApi_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF01AFB9204008FA782 /* Debug */,
+				607FACF11AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PGoApi_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				607FACF31AFB9204008FA782 /* Debug */,
+				607FACF41AFB9204008FA782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		888325711D63BDBE00F8805A /* Build configuration list for PBXNativeTarget "PokGoWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				888325721D63BDBE00F8805A /* Debug */,
+				888325731D63BDBE00F8805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		888325751D63BDBE00F8805A /* Build configuration list for PBXNativeTarget "PokGoWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				888325761D63BDBE00F8805A /* Debug */,
+				888325771D63BDBE00F8805A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
+}
