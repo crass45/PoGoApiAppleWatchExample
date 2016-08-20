@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* LoginViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		881D0E0D1D6762BA00AE358D /* SSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0E0C1D6762BA00AE358D /* SSConfig.swift */; };
+		881D0E0F1D67680700AE358D /* PGOApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0E0E1D67680700AE358D /* PGOApiController.swift */; };
+		881D0E111D67E6C600AE358D /* SnipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0E101D67E6C600AE358D /* SnipeController.swift */; };
 		888325201D6337BC00F8805A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8883251F1D6337BC00F8805A /* MapViewController.swift */; };
 		888325231D6337EF00F8805A /* PokemonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325211D6337EF00F8805A /* PokemonAnnotation.swift */; };
 		888325241D6337EF00F8805A /* TrainerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325221D6337EF00F8805A /* TrainerAnnotation.swift */; };
@@ -90,7 +93,7 @@
 		607FACD01AFB9204008FA782 /* PGoApi_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGoApi_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -100,6 +103,9 @@
 		61E9BAB4200D7A55068D41C7 /* Pods-PGoApi_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Example/Pods-PGoApi_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		66997A5960E5C0884BC1CE4E /* Pods-PGoApi_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		68719A6E9BEB3505427181EB /* Pods_PGoApi_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PGoApi_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		881D0E0C1D6762BA00AE358D /* SSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSConfig.swift; sourceTree = "<group>"; };
+		881D0E0E1D67680700AE358D /* PGOApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGOApiController.swift; sourceTree = "<group>"; };
+		881D0E101D67E6C600AE358D /* SnipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnipeController.swift; sourceTree = "<group>"; };
 		886CD0111D65D07700DB7901 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/PGoApi-ezqzantelmigkvgjyofalhqbdrzs/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		8883251F1D6337BC00F8805A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		888325211D6337EF00F8805A /* PokemonAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonAnnotation.swift; sourceTree = "<group>"; };
@@ -194,13 +200,16 @@
 				886CD0101D65CD0500DB7901 /* Routes */,
 				886CD00F1D65CCF100DB7901 /* Annotations */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				881D0E0E1D67680700AE358D /* PGOApiController.swift */,
+				607FACD71AFB9204008FA782 /* LoginViewController.swift */,
+				881D0E101D67E6C600AE358D /* SnipeController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				8883251F1D6337BC00F8805A /* MapViewController.swift */,
 				88E130BE1D64D15F00C14710 /* LogsViewController.swift */,
+				881D0E0C1D6762BA00AE358D /* SSConfig.swift */,
 			);
 			name = PoGoiPhone;
 			path = PGoApi;
@@ -673,11 +682,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				607FACD81AFB9204008FA782 /* LoginViewController.swift in Sources */,
+				881D0E0F1D67680700AE358D /* PGOApiController.swift in Sources */,
 				888325231D6337EF00F8805A /* PokemonAnnotation.swift in Sources */,
 				88E130BF1D64D15F00C14710 /* LogsViewController.swift in Sources */,
 				888325201D6337BC00F8805A /* MapViewController.swift in Sources */,
+				881D0E0D1D6762BA00AE358D /* SSConfig.swift in Sources */,
 				888325531D6368BA00F8805A /* SpawnPointAnnotation.swift in Sources */,
+				881D0E111D67E6C600AE358D /* SnipeController.swift in Sources */,
 				888325261D63440200F8805A /* FortAnnotation.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				888325241D6337EF00F8805A /* TrainerAnnotation.swift in Sources */,

@@ -6,10 +6,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="PGoApi_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="PGoApi_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -149,7 +149,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="QnD-kN-RjU">
             <objects>
-                <tabBarController id="dgI-ed-71I" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="dgI-ed-71I" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="PX9-aq-KPp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

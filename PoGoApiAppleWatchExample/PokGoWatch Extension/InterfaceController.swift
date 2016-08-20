@@ -14,6 +14,7 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var session:WCSession!
     
+    @IBOutlet var lbTitle: WKInterfaceLabel!
     @IBOutlet var grupoBolas: WKInterfaceGroup!
     @IBOutlet var grupoSplash: WKInterfaceGroup!
     
@@ -48,18 +49,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         
     }
     
-    @IBAction func sendMessage() {
-        let applicationData = ["counterValue":String(10)]
-        session.sendMessage(applicationData, replyHandler: {(respuesta)->Void in
-            print(respuesta)
-            
-            // handle reply from iPhone app here
-            }, errorHandler: {(error )->Void in
-                // catch any errors here
-                print(error.localizedDescription)
-        })
-    }
-    
     
     
     // se llama cuando se pulsa una acción en la notificación
@@ -68,7 +57,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+    func testCatchHandler( message: [String : AnyObject]) {
         if message.count > 0 {
             if let status = message["status"] as? String {
                 
@@ -109,10 +98,26 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBAction func lanzaPokeball() {
         var datosPokeball = applicationData
         datosPokeball["accion"] = "LanzaPokeball"
+        
+        self.lbTitle.setText("WAITING HANDLER")
         session.sendMessage(datosPokeball, replyHandler: {(respuesta)->Void in
             print(respuesta)
             
             // handle reply from iPhone app here
+            self.lbTitle.setText("HANDLER")
+            if respuesta.count > 0 {
+                if let status = respuesta["status"] as? String {
+                    self.lbTitle.setText(status)
+                }else {
+                    self.lbTitle.setText("No hay status")
+                }
+            }
+            else{
+                self.lbTitle.setText("Respuesta count 0")
+            }
+            self.testCatchHandler(respuesta)
+            
+            
             }, errorHandler: {(error )->Void in
                 // catch any errors here
                 print(error.localizedDescription)

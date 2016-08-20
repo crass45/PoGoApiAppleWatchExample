@@ -55,6 +55,7 @@
                     <connections>
                         <outlet property="grupoBolas" destination="aCk-h0-wDA" id="HC2-5v-luz"/>
                         <outlet property="grupoSplash" destination="k22-jF-2lj" id="o1p-rt-J3v"/>
+                        <outlet property="lbTitle" destination="4jW-rF-FAF" id="lDL-4V-8er"/>
                     </connections>
                 </controller>
             </objects>

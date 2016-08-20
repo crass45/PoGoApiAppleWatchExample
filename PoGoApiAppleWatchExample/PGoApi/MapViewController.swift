@@ -28,9 +28,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         drawAnnotation()
         
-        mapa.mapType = MKMapType.SatelliteFlyover
-        
-        
+        mapa.mapType = MKMapType.SatelliteFlyover        
 //        
     }
 
