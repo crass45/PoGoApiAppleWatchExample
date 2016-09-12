@@ -1,19 +1,21 @@
 //
-//  PGOApiController.swift
+//  BotController.swift
 //  PGoApi
 //
-//  Created by Jose Luis on 19/8/16.
+//  Created by Jose Luis on 24/8/16.
 //  Copyright © 2016 CocoaPods. All rights reserved.
 //
 
 import PGoApi
 
-class PGOApiController: AnyObject, PGoApiDelegate {
+class BotController: AnyObject, PGoApiDelegate {
     
-    
-    var replyHandler: ([String: AnyObject] -> Void)?
     
     let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    var wPokem:Pogoprotos.Map.Pokemon.WildPokemon!
+    
+    var tempEncounterId:UInt64?
+    var tempSpawnPoint:String?
     
     func didReceiveApiResponse(intent: PGoApiIntent, response: PGoApiResponse) {
         print("Got that API response: \(intent)")
@@ -26,17 +28,21 @@ class PGOApiController: AnyObject, PGoApiDelegate {
         if (intent == .EncounterPokemon){
             print("ENCOUNTER POKEMON!")
             //            print(response.response)
-            //            print(response.subresponses)
+            
             
             if response.subresponses.count > 0 {
                 if let r = response.subresponses[0] as? Pogoprotos.Networking.Responses.EncounterResponse {
                     if r.status == .EncounterSuccess {
                         let wPokem = r.wildPokemon
                         cazaPokemonConPokeBall(wPokem.encounterId, spawnPointId: wPokem.spawnPointId)
-                    }else {
-                        if replyHandler != nil {
-                            replyHandler!(["status":r.status.toString()])
-                        }
+                        print("PELEANDO CON POKEMON")
+                        print(wPokem.pokemonData.pokemonId.toString())
+                        print("IV ATACK:")
+                        print(wPokem.pokemonData.individualAttack)
+                        print("IV DEFENSE:")
+                        print(wPokem.pokemonData.individualDefense)
+                        print("IV STAMINIA:")
+                        print(wPokem.pokemonData.individualStamina)
                     }
                 }
             }
@@ -44,23 +50,18 @@ class PGOApiController: AnyObject, PGoApiDelegate {
         
         if (intent == .CatchPokemon){
             print("CAZANDO POKEMON!")
-            
+            print(response)
+            print(response.subresponses)
             if response.subresponses.count > 0 {
                 if let r = response.subresponses[0] as? Pogoprotos.Networking.Responses.CatchPokemonResponse {
                     let status = r.status.toString()
                     print(status)
-                    if self.replyHandler != nil {
-                        replyHandler!(["status":status])
-                    }
                     
                     if r.status == .CatchSuccess {
-                        //TODO se ha capturado correctamente al pokemon
-                        
                         print("CATCH SUCCESS")
                     }
                     
                     if r.status == .CatchFlee {
-                        //
                         print("CATCHFLEE")
                     }
                     
@@ -70,23 +71,36 @@ class PGOApiController: AnyObject, PGoApiDelegate {
                     
                     if r.status == .CatchMissed {
                         print("CATCH MISSED")
+                        cazaPokemonConPokeBall(wPokem.encounterId, spawnPointId: wPokem.spawnPointId)
                     }
                     
                     if r.status == .CatchEscape {
                         print("CATCH ESCAPE")
+                        print(wPokem.encounterId)
+                        print(wPokem.spawnPointId)
+                        cazaPokemonConPokeBall(wPokem.encounterId, spawnPointId: wPokem.spawnPointId)
                     }
                 }
             }
             
-            UIApplication.sharedApplication().cancelAllLocalNotifications()
-            NSNotificationCenter.defaultCenter().postNotificationName(UPDATE_LOG, object: nil)
+            
         }
         
         if (intent == .FortDetails){
+            print(response)
             print(response.subresponses)
         }
         if (intent == .DiskEncounter){
+            print("DISK ENCOUNTER")
+            print(response)
             print(response.subresponses)
+            if response.subresponses.count > 0 {
+                if let r = response.subresponses[0] as? Pogoprotos.Networking.Responses.DiskEncounterResponse {
+                    print(r.pokemonData)
+                    cazaPokemonConPokeBall(tempEncounterId!, spawnPointId: tempSpawnPoint!)
+                    //                    cazaPokemonConPokeBall(r.pokemonData.id, spawnPointId: "")
+                }
+            }
         }
         if (intent == .FortSearch){
             print(response)
@@ -107,47 +121,51 @@ class PGOApiController: AnyObject, PGoApiDelegate {
                         if r.status == .Success {
                             for cell in r.mapCells {
                                 catchablePokes.appendContentsOf(cell.catchablePokemons)
+                                
                                 gimnasios.appendContentsOf(cell.forts)
                                 print(cell.nearbyPokemons.count)
-                                for nearbyPoke in cell.nearbyPokemons {
-                                    let pokeNear = ["pokemonId":nearbyPoke.pokemonId.toString(), "distance":nearbyPoke.distanceInMeters]
-                                    nearbyPokes.append(pokeNear as! [String : AnyObject])
-                                }
+                                
+                                //                                for pokewild in cell.wildPokemons {
+                                //                                    print(pokewild)
+                                //                                    self.encounterPokemon(pokewild.encounterId, spawnPointId: pokewild.spawnPointId)
+                                //                                }
+                                
+                                //                                for nearbyPoke in cell.nearbyPokemons {
+                                ////                                    self.encounterPokemon(nearbyPoke.encounterId, spawnPointId: "0")
+                                //                                }
                             }
                             
                             
-                            
                             for poke in catchablePokes {
-                                if !pokesNotificados.contains(poke.spawnPointId){
-                                    //
-                                    pokesNotificados.append(poke.spawnPointId)
-                                    poke.spawnPointId
-                                    print("PokemonID:\(poke.pokemonId.hashValue)")
-                                    let not = UILocalNotification()
-                                    not.soundName = UILocalNotificationDefaultSoundName
-                                    not.alertBody = "\(poke.pokemonId.toString()) CERCANO"
-                                    not.alertTitle = "Tienes Cerca un \(poke.pokemonId.toString())"
-                                    not.category = "REMINDER_CATEGORY"
-                                    var infoNotif = [String: AnyObject]()
-                                    infoNotif["encounterID"] = poke.encounterId.hashValue
-                                    infoNotif["pokemonId"] = poke.pokemonId.hashValue
-                                    infoNotif["spawnPointId"] = poke.spawnPointId
-                                    not.userInfo = infoNotif
-                                    UIApplication.sharedApplication().scheduleLocalNotification(not)
-                                    
-                                }
+                                //todo esperar un tiempo aleatorio
+                                //                                self.encounterPokemon(poke.encounterId, spawnPointId: poke.spawnPointId)
                             }
                             
                             for fort in gimnasios {
                                 if fort.types == .Checkpoint {
+                                    let distance = PGoLocationUtils().getDistanceBetweenPoints(userLocation.latitude, startLongitude: userLocation.longitude, endLatitude: fort.latitude, endLongitude: fort.longitude)
+                                    
+                                    if (distance < 35){
+                                        // se puede girar
+                                        if fort.cooldownCompleteTimestampMs == 0 {
+                                            request.fortSearch(fort.id, fortLatitude: fort.latitude, fortLongitude: fort.longitude)
+                                            request.makeRequest(.FortSearch, delegate: self)
+                                        }
+                                    }
+                                    
+                                    if (fort.hasLureInfo){
+                                        
+                                        print(fort.activeFortModifier)
+                                        print(fort.lureInfo)
+                                        
+                                        //                                        cazaPokemonConPokeBall(fort.lureInfo.encounterId, spawnPointId: "")
+                                        
+                                        //                                        cazaPokemonConPokeBall(fort.lureInfo.encounterId, spawnPointId: fort.id)
+                                        //                                        request.diskEncounter(fort.lureInfo.encounterId, fortId: fort.id)
+                                        //                                        request.makeRequest(.DiskEncounter, delegate: self)
+                                    }
                                     //                                    request.fortDetails(fort.id, fortLatitude: fort.latitude, fortLongitude: fort.longitude)
                                     //                                    request.makeRequest(.FortDetails, delegate: self)
-                                    
-//                                    print(fort.lureInfo)
-                                    request.fortDetails(fort.id, fortLatitude: fort.latitude, fortLongitude: fort.longitude)
-                                    request.makeRequest(.FortDetails, delegate: self)
-                                    //                                        request.fortSearch(fort.id, fortLatitude: fort.latitude, fortLongitude: fort.longitude)
-                                    //                                        request.makeRequest(.FortSearch, delegate: self)
                                     
                                 }
                             }
@@ -159,10 +177,7 @@ class PGOApiController: AnyObject, PGoApiDelegate {
                         print("No es del tipo")
                     }
                 }
-                
-                if gimnasios.count > 0 {
-                    NSNotificationCenter.defaultCenter().postNotificationName(NEW_POKEMONS_NOTIFICATION, object: nil)
-                }
+                NSNotificationCenter.defaultCenter().postNotificationName(NEW_POKEMONS_NOTIFICATION, object: nil)
             }
             
         }
@@ -212,21 +227,21 @@ class PGOApiController: AnyObject, PGoApiDelegate {
     }
     
     func getMapObject(){
+        updateLocation(userLocation.latitude, lon: userLocation.longitude)
         request.getMapObjects()
         request.makeRequest(.GetMapObjects, delegate: self)
     }
     
     
-    func encounterPokemon(encounterId:UInt64, spawnPointId:String, replyHandler: [String: AnyObject] -> Void){
+    func encounterPokemon(encounterId:UInt64, spawnPointId:String){
         request.encounterPokemon(encounterId, spawnPointId: spawnPointId)
         request.makeRequest(.EncounterPokemon, delegate: self)
-        
-        self.replyHandler = replyHandler
         
     }
     
     func cazaPokemonConPokeBall(encounterId:UInt64, spawnPointId:String){
         //
+        
         request.catchPokemon(encounterId, spawnPointId: spawnPointId, pokeball: Pogoprotos.Inventory.Item.ItemId.ItemPokeBall, hitPokemon: true, normalizedReticleSize: 1, normalizedHitPosition: 1, spinModifier: 1)
         request.makeRequest(.CatchPokemon, delegate: self)
     }

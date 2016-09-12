@@ -41,10 +41,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mEk-0J-XPr">
+                                <rect key="frame" x="137" y="205" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Bot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BjG-7L-FKc">
+                                <rect key="frame" x="60" y="210" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZw-od-Z4O">
-                                <rect key="frame" x="268" y="213" width="65" height="45"/>
+                                <rect key="frame" x="60" y="254" width="520" height="45"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="START"/>
                                 <connections>
                                     <action selector="logIn:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NQE-Qp-TQN"/>
                                 </connections>
@@ -52,22 +61,29 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EZw-od-Z4O" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="083-XP-80G"/>
+                            <constraint firstItem="EZw-od-Z4O" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" constant="20" id="083-XP-80G"/>
                             <constraint firstItem="Iit-pP-xvg" firstAttribute="top" secondItem="fCw-H3-Dtz" secondAttribute="bottom" constant="24" id="0Ld-rr-DJO"/>
                             <constraint firstItem="Iit-pP-xvg" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="5gC-Kp-dlb"/>
                             <constraint firstItem="1bx-Ge-sFr" firstAttribute="top" secondItem="Iit-pP-xvg" secondAttribute="bottom" constant="8" id="BTc-Dt-85k"/>
+                            <constraint firstItem="mEk-0J-XPr" firstAttribute="leading" secondItem="BjG-7L-FKc" secondAttribute="trailing" constant="8" id="Cyi-M9-h7u"/>
                             <constraint firstItem="1bx-Ge-sFr" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="EGf-GI-Gsr"/>
-                            <constraint firstItem="EZw-od-Z4O" firstAttribute="top" secondItem="1bx-Ge-sFr" secondAttribute="bottom" constant="16" id="Vqm-JB-ZGE"/>
+                            <constraint firstItem="BjG-7L-FKc" firstAttribute="top" secondItem="1bx-Ge-sFr" secondAttribute="bottom" constant="13" id="Ol0-WV-qP4"/>
+                            <constraint firstItem="EZw-od-Z4O" firstAttribute="top" secondItem="1bx-Ge-sFr" secondAttribute="bottom" constant="57" id="Vqm-JB-ZGE"/>
                             <constraint firstItem="fCw-H3-Dtz" firstAttribute="top" secondItem="fPT-vE-mQZ" secondAttribute="bottom" constant="24" id="Yrw-eo-sGZ"/>
+                            <constraint firstItem="EZw-od-Z4O" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="bhW-Aa-UW9"/>
+                            <constraint firstItem="mEk-0J-XPr" firstAttribute="centerY" secondItem="BjG-7L-FKc" secondAttribute="centerY" id="ca1-2C-hCU"/>
                             <constraint firstItem="1bx-Ge-sFr" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lmq-EN-S8f"/>
                             <constraint firstItem="fPT-vE-mQZ" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="nga-ja-ECK"/>
+                            <constraint firstItem="EZw-od-Z4O" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="rHI-ZQ-5Dt"/>
                             <constraint firstItem="fPT-vE-mQZ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="rYa-xz-eTf"/>
+                            <constraint firstItem="BjG-7L-FKc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="40" id="sv3-bv-0LB"/>
                             <constraint firstItem="fCw-H3-Dtz" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="tSb-L1-AJW"/>
                             <constraint firstItem="Iit-pP-xvg" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" multiplier="0.8" id="uEi-4L-bfw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="acountTypeSegment" destination="fCw-H3-Dtz" id="6TX-IH-CRd"/>
+                        <outlet property="startBot" destination="mEk-0J-XPr" id="n1e-rZ-7dg"/>
                         <outlet property="tfPass" destination="1bx-Ge-sFr" id="oK0-tP-tMU"/>
                         <outlet property="tfUsername" destination="Iit-pP-xvg" id="Gfx-VE-ce4"/>
                         <segue destination="dgI-ed-71I" kind="show" identifier="mainSegue" id="fI3-Ia-leU"/>

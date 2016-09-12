@@ -25,6 +25,7 @@ var textoLog = ""
 var pokesNotificados:[String] = []
 
 var catchablePokes:[Pogoprotos.Map.Pokemon.MapPokemon] = []
+var nearbyPokes:[[String:AnyObject]] = []
 
 var gimnasios:[Pogoprotos.Map.Fort.FortData] = []
 var request = PGoApiRequest()
@@ -58,6 +59,21 @@ get{
 set(newVal){
     let settings = NSUserDefaults.standardUserDefaults()
     settings.setObject(newVal, forKey: "pass")
+    settings.synchronize()
+}
+}
+
+
+var botStart:Bool? {
+get{
+    let settings = NSUserDefaults.standardUserDefaults()
+    return settings.boolForKey("botStart")
+    
+}
+
+set(newVal){
+    let settings = NSUserDefaults.standardUserDefaults()
+    settings.setBool(newVal!, forKey: "botStart")
     settings.synchronize()
 }
 }

@@ -26,9 +26,25 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="PokGoWatch" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" id="k22-jF-2lj">
+                        <group width="1" alignment="left" layout="vertical" id="k22-jF-2lj">
                             <items>
-                                <label alignment="left" text="Pokemon Go Watch Test" id="HMZ-GY-w4k"/>
+                                <label alignment="left" text="Pokemons Cercanos" id="LKE-id-xdr"/>
+                                <table alignment="left" id="iaw-Tl-5xH">
+                                    <items>
+                                        <tableRow identifier="mainRowType" id="4P6-ng-mMZ" customClass="MainRowType" customModule="PokGoWatch_Extension">
+                                            <group key="rootItem" width="1" alignment="left" id="j5l-b9-hOC">
+                                                <items>
+                                                    <imageView alignment="left" verticalAlignment="center" image="001" id="R6x-im-E3s"/>
+                                                    <label alignment="left" verticalAlignment="center" text="Label" id="ZKL-Mg-3eh"/>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="rowDescription" destination="ZKL-Mg-3eh" id="GaM-Ja-Vfc"/>
+                                                <outlet property="rowIcon" destination="R6x-im-E3s" id="4Mx-l1-86h"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
                             </items>
                         </group>
                         <group width="1" alignment="left" layout="vertical" id="aCk-h0-wDA">
@@ -49,13 +65,20 @@
                                         <action selector="lanzaUltraBall" destination="AgC-eL-Hgc" id="9TZ-hJ-p1Q"/>
                                     </connections>
                                 </button>
+                                <group width="1" alignment="left" id="FDf-Cy-MhR">
+                                    <items>
+                                        <imageView alignment="center" image="001" id="nhq-nZ-gA9"/>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="groupIndicator" destination="FDf-Cy-MhR" id="8UK-LN-lYP"/>
                         <outlet property="grupoBolas" destination="aCk-h0-wDA" id="HC2-5v-luz"/>
                         <outlet property="grupoSplash" destination="k22-jF-2lj" id="o1p-rt-J3v"/>
                         <outlet property="lbTitle" destination="4jW-rF-FAF" id="lDL-4V-8er"/>
+                        <outlet property="table" destination="iaw-Tl-5xH" id="hGL-0P-axc"/>
                     </connections>
                 </controller>
             </objects>

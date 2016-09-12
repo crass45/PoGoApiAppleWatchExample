@@ -16,9 +16,17 @@ import PGoApi
 //Default object to controll the PGOApi events
 let pokemonGoApi = PGOApiController()
 
+//Object to bot
+let botController = BotController()
+
+var pokeToSnipe:NSURL?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, CLLocationManagerDelegate {
     
+    
+    let SEARCH_TIMER_TIME = 120.0
+    let SEARCH_BOT_TIME = 30.0
     var window: UIWindow?
     
     /// Default WatchConnectivity session for communicating with the watch.
@@ -26,12 +34,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, CLLoca
     
     /// Location manager used to start and stop updating location.
     let manager = CLLocationManager()
+    var searchTimer:NSTimer?
     
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        //miramos si arrancamos con snipe
+        if launchOptions != nil{
+            pokeToSnipe = launchOptions![UIApplicationLaunchOptionsURLKey] as? NSURL
+            print(pokeToSnipe?.absoluteString)
+            
+            //TODO HACER LO QUE TOCA
+        }
         let modifyAction :UIMutableUserNotificationAction =
             UIMutableUserNotificationAction()
         modifyAction.identifier = "MODIFY_IDENTIFIER"
@@ -66,12 +82,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, CLLoca
         manager.delegate = self
         manager.allowsBackgroundLocationUpdates = true
         manager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        //filter location manager event 5 metters
-        manager.distanceFilter = 5
+        //filter location manager event 2 metters
+        manager.distanceFilter = 2
         
-        manager.startUpdatingLocation()
+        
+        
+        //initialize the timer to search pokemon when we are stoped
+        searchTimer = NSTimer.scheduledTimerWithTimeInterval(SEARCH_TIMER_TIME, target: self, selector: #selector(AppDelegate.timerAction), userInfo: nil, repeats: true)
+        
+        
         
         return true
+    }
+    
+    func timerAction(){        
+        pokemonGoApi.getMapObject()
+    }
+    
+    func timerBotAction() {
+        botController.getMapObject()
     }
     
     func applicationWillResignActive(application: UIApplication) {
@@ -103,16 +132,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, CLLoca
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         print(notification)
-        UIAlertView(title: notification.alertTitle, message: "Notificacion", delegate: self, cancelButtonTitle: "OK").show()
+//        UIAlertView(title: notification.alertTitle, message: "Notificacion", delegate: self, cancelButtonTitle: "OK").show()
     }
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
-        UIAlertView(title: "SIN HANDEL", message: notification.alertBody, delegate: self, cancelButtonTitle: "CANCEL").show()
+//        UIAlertView(title: "SIN HANDEL", message: notification.alertBody, delegate: self, cancelButtonTitle: "CANCEL").show()
     }
     
     
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, withResponseInfo responseInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
-        UIAlertView(title: "CON HANDLE", message: "", delegate: self, cancelButtonTitle: "CANCEL").show()
+//        UIAlertView(title: "CON HANDLE", message: "", delegate: self, cancelButtonTitle: "CANCEL").show()
     }
     
     
@@ -132,6 +161,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, CLLoca
             let encounter = UInt64(bitPattern: Int64(message["encounterID"] as! Int))
             pokemonGoApi.encounterPokemon(encounter, spawnPointId: spawn, replyHandler: replyHandler)
         }
+        if message["accion"] as? String == "LanzaSuperBall" {
+            let spawn = message["spawnPointId"] as! String
+            
+            let encounter = UInt64(bitPattern: Int64(message["encounterID"] as! Int))
+            pokemonGoApi.encounterPokemon(encounter, spawnPointId: spawn, replyHandler: replyHandler)
+        }
+        if message["accion"] as? String == "LanzaUltraBall" {
+            let spawn = message["spawnPointId"] as! String
+            
+            let encounter = UInt64(bitPattern: Int64(message["encounterID"] as! Int))
+            pokemonGoApi.encounterPokemon(encounter, spawnPointId: spawn, replyHandler: replyHandler)
+        }
+        
+        if message["accion"] as? String == "getNearPokes" {
+            
+            print(nearbyPokes)
+            let responseDict = ["NearbyPokes": nearbyPokes]
+            
+            replyHandler(responseDict)
+        }
     }
     
     //MARK LOCATION DELEGATE
@@ -142,10 +191,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, CLLoca
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
+        if searchTimer != nil {
+            searchTimer?.invalidate()
+            searchTimer = NSTimer.scheduledTimerWithTimeInterval(SEARCH_TIMER_TIME, target: self, selector: #selector(AppDelegate.timerAction), userInfo: nil, repeats: true)
+        }
+        
         let lastLocationCoordinate = locations.last!.coordinate
         
         
         updateLocation(lastLocationCoordinate.latitude, lon: lastLocationCoordinate.longitude)
+        
         
         pokemonGoApi.getMapObject()
         NSNotificationCenter.defaultCenter().postNotificationName(UPDATE_LOCATION_NOTIFICATION, object: nil)
@@ -189,7 +244,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate, CLLoca
         
         //llamamos al sniper
         let sniper = SnipeController(pokeName: pokemonName, lat: latitud, lon: longitud, latAntique: userLocation.latitude, lonAntique: userLocation.longitude)
-        sniper.snipe()        
+        sniper.snipe()
         return true
     }
     

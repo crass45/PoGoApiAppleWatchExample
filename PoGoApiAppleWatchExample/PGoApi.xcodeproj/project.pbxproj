@@ -16,6 +16,7 @@
 		881D0E0D1D6762BA00AE358D /* SSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0E0C1D6762BA00AE358D /* SSConfig.swift */; };
 		881D0E0F1D67680700AE358D /* PGOApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0E0E1D67680700AE358D /* PGOApiController.swift */; };
 		881D0E111D67E6C600AE358D /* SnipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D0E101D67E6C600AE358D /* SnipeController.swift */; };
+		88455E6E1D6DA13A001F7DF3 /* BotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88455E6D1D6DA13A001F7DF3 /* BotController.swift */; };
 		888325201D6337BC00F8805A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8883251F1D6337BC00F8805A /* MapViewController.swift */; };
 		888325231D6337EF00F8805A /* PokemonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325211D6337EF00F8805A /* PokemonAnnotation.swift */; };
 		888325241D6337EF00F8805A /* TrainerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888325221D6337EF00F8805A /* TrainerAnnotation.swift */; };
@@ -31,10 +32,12 @@
 		888325701D63BDBE00F8805A /* PokGoWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 888325561D63BDBE00F8805A /* PokGoWatch.app */; };
 		889740331D65D62B00AA5227 /* Pods_PGoApi_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889740321D65D62B00AA5227 /* Pods_PGoApi_Example.framework */; };
 		889740351D65D9CE00AA5227 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889740341D65D9CE00AA5227 /* CoreLocation.framework */; };
+		88A7544F1D6F56EA00EFBFB3 /* retiro.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 88A7544E1D6F56EA00EFBFB3 /* retiro.gpx */; };
+		88A754511D6F587A00EFBFB3 /* zooBarcelona.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 88A754501D6F587A00EFBFB3 /* zooBarcelona.gpx */; };
+		88A754531D6F597800EFBFB3 /* arboles-senda-botanica-del-retiro-de-madrid-2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 88A754521D6F597800EFBFB3 /* arboles-senda-botanica-del-retiro-de-madrid-2.gpx */; };
 		88B256DC1D63D59700676555 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B256DB1D63D59700676555 /* NotificationController.swift */; };
 		88E130BD1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 88E130BC1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx */; };
 		88E130BF1D64D15F00C14710 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E130BE1D64D15F00C14710 /* LogsViewController.swift */; };
-		AB53B47BC6DE73D3872097E2 /* Pods_PGoApi_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68719A6E9BEB3505427181EB /* Pods_PGoApi_Tests.framework */; };
 		D5375C16787C4D7AA36BBEDC /* Pods_PGoApi_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55EA2C22B2339E6AEB2C1C4E /* Pods_PGoApi_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -101,11 +104,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		61E9BAB4200D7A55068D41C7 /* Pods-PGoApi_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Example/Pods-PGoApi_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		66997A5960E5C0884BC1CE4E /* Pods-PGoApi_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		68719A6E9BEB3505427181EB /* Pods_PGoApi_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PGoApi_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		881D0E0C1D6762BA00AE358D /* SSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSConfig.swift; sourceTree = "<group>"; };
 		881D0E0E1D67680700AE358D /* PGOApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PGOApiController.swift; sourceTree = "<group>"; };
 		881D0E101D67E6C600AE358D /* SnipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnipeController.swift; sourceTree = "<group>"; };
+		88455E6D1D6DA13A001F7DF3 /* BotController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotController.swift; sourceTree = "<group>"; };
 		886CD0111D65D07700DB7901 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/PGoApi-ezqzantelmigkvgjyofalhqbdrzs/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		8883251F1D6337BC00F8805A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		888325211D6337EF00F8805A /* PokemonAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonAnnotation.swift; sourceTree = "<group>"; };
@@ -120,16 +123,18 @@
 		888325621D63BDBE00F8805A /* PokGoWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PokGoWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		888325671D63BDBE00F8805A /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		888325691D63BDBE00F8805A /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		8883256B1D63BDBE00F8805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8883256B1D63BDBE00F8805A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "PokGoWatch Extension/Assets.xcassets"; sourceTree = SOURCE_ROOT; };
 		8883256D1D63BDBE00F8805A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		889740231D65D10300AA5227 /* PGoApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PGoApi.framework; path = "../../Library/Developer/Xcode/DerivedData/PGoApi-ezqzantelmigkvgjyofalhqbdrzs/Build/Products/Debug-iphoneos/PGoApi/PGoApi.framework"; sourceTree = "<group>"; };
 		889740321D65D62B00AA5227 /* Pods_PGoApi_Example.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PGoApi_Example.framework; path = "Pods/../build/Debug-iphoneos/Pods_PGoApi_Example.framework"; sourceTree = "<group>"; };
 		889740341D65D9CE00AA5227 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.2.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		88A7544E1D6F56EA00EFBFB3 /* retiro.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = retiro.gpx; path = ../../../Downloads/retiro.gpx; sourceTree = "<group>"; };
+		88A754501D6F587A00EFBFB3 /* zooBarcelona.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = zooBarcelona.gpx; sourceTree = "<group>"; };
+		88A754521D6F597800EFBFB3 /* arboles-senda-botanica-del-retiro-de-madrid-2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "arboles-senda-botanica-del-retiro-de-madrid-2.gpx"; sourceTree = "<group>"; };
 		88B256DB1D63D59700676555 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		88E130BC1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ruta-jardines-del-buen-retiro.gpx"; sourceTree = "<group>"; };
 		88E130BE1D64D15F00C14710 /* LogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		BA43FE89BBE5B12039D64BD7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E6DADFDBA44A43D7C59198E9 /* Pods-PGoApi_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGoApi_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F3C39E33D25519A2548C9BC1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,7 +152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB53B47BC6DE73D3872097E2 /* Pods_PGoApi_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +214,7 @@
 				8883251F1D6337BC00F8805A /* MapViewController.swift */,
 				88E130BE1D64D15F00C14710 /* LogsViewController.swift */,
 				881D0E0C1D6762BA00AE358D /* SSConfig.swift */,
+				88455E6D1D6DA13A001F7DF3 /* BotController.swift */,
 			);
 			name = PoGoiPhone;
 			path = PGoApi;
@@ -263,7 +268,10 @@
 		886CD0101D65CD0500DB7901 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
+				88A754521D6F597800EFBFB3 /* arboles-senda-botanica-del-retiro-de-madrid-2.gpx */,
+				88A754501D6F587A00EFBFB3 /* zooBarcelona.gpx */,
 				88E130BC1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx */,
+				88A7544E1D6F56EA00EFBFB3 /* retiro.gpx */,
 				888325271D63603B00F8805A /* sm.gpx */,
 			);
 			name = Routes;
@@ -282,9 +290,9 @@
 		888325661D63BDBE00F8805A /* PokGoWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8883256B1D63BDBE00F8805A /* Assets.xcassets */,
 				888325671D63BDBE00F8805A /* InterfaceController.swift */,
 				888325691D63BDBE00F8805A /* ExtensionDelegate.swift */,
-				8883256B1D63BDBE00F8805A /* Assets.xcassets */,
 				8883256D1D63BDBE00F8805A /* Info.plist */,
 				88B256DB1D63D59700676555 /* NotificationController.swift */,
 			);
@@ -309,8 +317,6 @@
 			children = (
 				61E9BAB4200D7A55068D41C7 /* Pods-PGoApi_Example.debug.xcconfig */,
 				37629CDE1FF91C1BC75F9C04 /* Pods-PGoApi_Example.release.xcconfig */,
-				66997A5960E5C0884BC1CE4E /* Pods-PGoApi_Tests.debug.xcconfig */,
-				E6DADFDBA44A43D7C59198E9 /* Pods-PGoApi_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -347,15 +353,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "PGoApi_Tests" */;
 			buildPhases = (
-				1A660253EA57D0F067D78901 /* 📦 Check Pods Manifest.lock */,
 				DDDBDDC8BAAE91523635E6DC /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
 				03B3333A23A87574CE8CB0F0 /* [CP] Embed Pods Frameworks */,
 				DC368D46D1EED499DC04C2B3 /* [CP] Copy Pods Resources */,
-				53A0886B3A82CB846637A81C /* 📦 Embed Pods Frameworks */,
-				0CC66C3020E34A7E2C1AB97C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -460,10 +463,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A7544F1D6F56EA00EFBFB3 /* retiro.gpx in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				88A754531D6F597800EFBFB3 /* arboles-senda-botanica-del-retiro-de-madrid-2.gpx in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				888325281D63603B00F8805A /* sm.gpx in Resources */,
+				88A754511D6F587A00EFBFB3 /* zooBarcelona.gpx in Resources */,
 				88E130BD1D64AF1900C14710 /* ruta-jardines-del-buen-retiro.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,51 +509,6 @@
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0CC66C3020E34A7E2C1AB97C /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGoApi_Tests/Pods-PGoApi_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1A660253EA57D0F067D78901 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		53A0886B3A82CB846637A81C /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -689,6 +650,7 @@
 				888325201D6337BC00F8805A /* MapViewController.swift in Sources */,
 				881D0E0D1D6762BA00AE358D /* SSConfig.swift in Sources */,
 				888325531D6368BA00F8805A /* SpawnPointAnnotation.swift in Sources */,
+				88455E6E1D6DA13A001F7DF3 /* BotController.swift in Sources */,
 				881D0E111D67E6C600AE358D /* SnipeController.swift in Sources */,
 				888325261D63440200F8805A /* FortAnnotation.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -894,7 +856,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66997A5960E5C0884BC1CE4E /* Pods-PGoApi_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -913,7 +874,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6DADFDBA44A43D7C59198E9 /* Pods-PGoApi_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",

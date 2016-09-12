@@ -21,7 +21,7 @@ class FortAnnotation:NSObject, MKAnnotation {
     init(poke:Pogoprotos.Map.Fort.FortData){
         self.coordinate = CLLocationCoordinate2DMake(Double(poke.latitude), Double(poke.longitude))
         self.fort = poke
-        if fort!.hasActiveFortModifier {
+        if fort!.types == .Checkpoint {
             
             title = "POKEPARADA"
             subtitle = ""

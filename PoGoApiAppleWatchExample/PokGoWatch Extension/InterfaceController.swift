@@ -14,9 +14,16 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
     var session:WCSession!
     
+    @IBOutlet var lbPokesCerca: WKInterfaceLabel!
+    @IBOutlet var table: WKInterfaceTable!
     @IBOutlet var lbTitle: WKInterfaceLabel!
     @IBOutlet var grupoBolas: WKInterfaceGroup!
     @IBOutlet var grupoSplash: WKInterfaceGroup!
+    @IBOutlet var groupIndicator: WKInterfaceGroup!
+    
+    var nearbyPokes:[[String:AnyObject]] = []
+    
+    
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -41,6 +48,31 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session.delegate = self
             session.activateSession()
         }
+        
+        let datosMessage = ["accion":"getNearPokes"]
+        
+        
+        session.sendMessage(datosMessage, replyHandler: {(respuesta)->Void in
+            // handle reply from iPhone app here
+            if respuesta.count > 0 {
+                if let nearby = respuesta["NearbyPokes"] as? [[String:AnyObject]] {
+                    self.nearbyPokes = nearby
+                    self.configureTableWithData()
+//                    self.lbPokesCerca.setText("\(self.nearbyPokes.count)")
+                }else {
+                    
+                }
+            }
+            else{
+                self.lbTitle.setText("Respuesta count 0")
+            }
+            
+            
+            }, errorHandler: {(error )->Void in
+                // catch any errors here
+                print(error.localizedDescription)
+        })
+
     }
     
     override func didDeactivate() {
@@ -54,6 +86,29 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // se llama cuando se pulsa una acción en la notificación
     func handleActionWithIdentifier(identifier: String?, forLocalNotification localNotification: UILocalNotification, withResponseInfo responseInfo: [NSObject : AnyObject]) {
         
+    }
+    
+    
+    func configureTableWithData() {
+        self.table.setNumberOfRows(nearbyPokes.count, withRowType: "mainRowType")
+        
+        for i in 0 ..< self.table.numberOfRows {
+            let theRow = self.table.rowControllerAtIndex(i) as? MainRowType
+            let pokemon = nearbyPokes[i]
+            let pokemonName = pokemon["pokemonId"] as? String
+            let metros = pokemon["distance"] as? Float
+            
+            
+            theRow?.rowDescription.setText("\(pokemonName!) a \(metros!)m")
+        }
+        
+//        for (NSInteger i = 0; i < self.table.numberOfRows; i++) {
+//            MainRowType* theRow = [self.table rowControllerAtIndex:i];
+//            MyDataObject* dataObj = [dataObjects objectAtIndex:i];
+//            
+//            [theRow.rowDescription setText:dataObj.text];
+//            [theRow.rowIcon setImage:dataObj.image];
+//        }
     }
     
     
@@ -95,58 +150,67 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     }
     
     
-    @IBAction func lanzaPokeball() {
+    func muestraIndicador(){
+        groupIndicator.setHidden(false)
+        grupoBolas.setHidden(true)
+    }
+    
+    func ocultaIndicador(){
+        groupIndicator.setHidden(true)
+        grupoBolas.setHidden(false)
+    }
+    
+    
+    
+    func lanzaBola(action:String){
         var datosPokeball = applicationData
-        datosPokeball["accion"] = "LanzaPokeball"
+        datosPokeball["accion"] = action
         
-        self.lbTitle.setText("WAITING HANDLER")
+        muestraIndicador()
+        
         session.sendMessage(datosPokeball, replyHandler: {(respuesta)->Void in
             print(respuesta)
-            
             // handle reply from iPhone app here
-            self.lbTitle.setText("HANDLER")
             if respuesta.count > 0 {
                 if let status = respuesta["status"] as? String {
-                    self.lbTitle.setText(status)
+                    
                 }else {
-                    self.lbTitle.setText("No hay status")
+                    
                 }
             }
             else{
                 self.lbTitle.setText("Respuesta count 0")
             }
+            self.ocultaIndicador()
             self.testCatchHandler(respuesta)
             
             
+            
             }, errorHandler: {(error )->Void in
                 // catch any errors here
+                self.ocultaIndicador()
                 print(error.localizedDescription)
+                self.testCatchHandler(["error":"error"])
         })
     }
+    
+    @IBAction func lanzaPokeball() {
+        lanzaBola("LanzaPokeball")
+        
+    }
     @IBAction func lanzaSuperBall() {
-        var datosPokeball = applicationData
-        datosPokeball["accion"] = "LanzaSuperBall"
-        session.sendMessage(datosPokeball, replyHandler: {(respuesta)->Void in
-            print(respuesta)
-            
-            // handle reply from iPhone app here
-            }, errorHandler: {(error )->Void in
-                // catch any errors here
-                print(error.localizedDescription)
-        })
+        lanzaBola("LanzaSuperBall")
     }
     
     @IBAction func lanzaUltraBall() {
-        var datosPokeball = applicationData
-        datosPokeball["accion"] = "LanzaUltraBall"
-        session.sendMessage(datosPokeball, replyHandler: {(respuesta)->Void in
-            print(respuesta)
-            
-            // handle reply from iPhone app here
-            }, errorHandler: {(error )->Void in
-                // catch any errors here
-                print(error.localizedDescription)
-        })
+        lanzaBola("LanzaUltraBall")
     }
     
+    
+}
+
+
+class MainRowType: NSObject {
+    @IBOutlet weak var rowDescription: WKInterfaceLabel!
+    @IBOutlet weak var rowIcon: WKInterfaceImage!
 }

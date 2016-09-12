@@ -13,18 +13,20 @@ import PGoApi
 
 class LoginViewController: UIViewController, PGoAuthDelegate {
     
+    @IBOutlet weak var startBot: UISwitch!
     @IBOutlet weak var tfPass: UITextField!
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var acountTypeSegment: UISegmentedControl!
     var ptcAuth: PtcOAuth!
     var gogleAuth: GPSOAuth!
     
-    
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if user != nil {
-            logIn()
+            tfUsername.text = user
+            tfPass.text = pass
         }
         
     }            
@@ -45,7 +47,12 @@ class LoginViewController: UIViewController, PGoAuthDelegate {
         print("Starting simulation...")
         request.setLocation(userLocation.latitude, longitude: userLocation.longitude, altitude: 1)
         request.simulateAppStart()
-        request.makeRequest(.Login, delegate: pokemonGoApi)
+        
+        if (botStart!) {
+            request.makeRequest(.Login, delegate: botController)
+        }else{
+            request.makeRequest(.Login, delegate: pokemonGoApi)
+        }
         
         
     }
@@ -70,6 +77,24 @@ class LoginViewController: UIViewController, PGoAuthDelegate {
     
     
     func logIn(){
+        botStart = startBot.on
+        
+        if botStart! {
+        
+            //TODO START BOT
+            
+            //Nos posicionamos en retiro madrid
+            userLocation = CLLocationCoordinate2DMake(40.4174945, -3.6832152)
+            //arrancamos el bot
+            
+            botController.getMapObject()
+        }else {
+            appDelegate.searchTimer?.invalidate()
+            appDelegate.searchTimer = nil
+            appDelegate.manager.startUpdatingLocation()
+            appDelegate.searchTimer = NSTimer.scheduledTimerWithTimeInterval(appDelegate.SEARCH_BOT_TIME, target: appDelegate, selector: #selector(AppDelegate.timerBotAction), userInfo: nil, repeats: true)
+        }
+        
         if authType == 0 {
             self.ptcAuth = PtcOAuth()
             self.ptcAuth.delegate = self

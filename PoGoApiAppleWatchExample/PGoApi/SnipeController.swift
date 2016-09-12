@@ -35,7 +35,7 @@ class SnipeController: AnyObject, PGoApiDelegate {
         if (intent == .EncounterPokemon){
             print("ENCOUNTER POKEMON!")
             //            print(response.response)
-            //            print(response.subresponses)
+//                        print(response.subresponses)
             
             if response.subresponses.count > 0 {
                 if let r = response.subresponses[0] as? Pogoprotos.Networking.Responses.EncounterResponse {
@@ -43,6 +43,9 @@ class SnipeController: AnyObject, PGoApiDelegate {
                         updateLocation(antiqueLatitude, lon: antiqueLongitude)
                         appDelegate.manager.startUpdatingLocation()
                         wPokem = r.wildPokemon
+                        
+//                        UIAlertView(title: "\(pokemonName) encontrado", message: "CP:\(wPokem.pokemonData.cp)\nIV_Atack:\(wPokem.pokemonData.individualAttack)\nIV_Defense:\(wPokem.pokemonData.individualDefense)\nIV_Stamina:\(wPokem.pokemonData.individualStamina)", delegate: self, cancelButtonTitle: "OK").show()
+                        
                         cazaPokemonConPokeBall(wPokem.encounterId, spawnPointId: wPokem.spawnPointId)
                         
                     }
@@ -63,25 +66,31 @@ class SnipeController: AnyObject, PGoApiDelegate {
                         
                         print("CATCH SUCCESS")
                         
-                        UIAlertView(title: "POKEMON SNIPEADO", message: "", delegate: self, cancelButtonTitle: "OK").show()
+//                        UIAlertView(title: "POKEMON SNIPEADO", message: "", delegate: self, cancelButtonTitle: "OK").show()
                     }
                     
                     if r.status == .CatchFlee {
                         //
                         print("CATCHFLEE")
+//                        UIAlertView(title: "EL POKEMON SE HA ESFUMADO", message: "", delegate: self, cancelButtonTitle: "OK").show()
                     }
                     
                     if r.status == .CatchError {
                         print("CATCH ERROR")
+//                        UIAlertView(title: "ERROR AL CAZAR CATCH ERROR", message: "", delegate: self, cancelButtonTitle: "OK").show()
                     }
                     
                     if r.status == .CatchMissed {
                         print("CATCH MISSED")
+//                        UIAlertView(title: "CATCH MISSED REINTENTAMOS", message: "", delegate: self, cancelButtonTitle: "OK").show()
                         cazaPokemonConPokeBall(wPokem.encounterId, spawnPointId: wPokem.spawnPointId)
                     }
                     
                     if r.status == .CatchEscape {
                         print("CATCH ESCAPE")
+//                        UIAlertView(title: "EL POKEMON SE HA ESCAPADO, REINTANTAMOS", message: "", delegate: self, cancelButtonTitle: "OK").show()
+                        print(wPokem.encounterId)
+                        print(wPokem.spawnPointId)
                         cazaPokemonConPokeBall(wPokem.encounterId, spawnPointId: wPokem.spawnPointId)
                     }
                 }
@@ -92,10 +101,9 @@ class SnipeController: AnyObject, PGoApiDelegate {
         
         if (intent == .GetMapObjects) {
             //            print(response)
-            //            print(response.subresponses)
+//                        print(response.subresponses)
             if response.subresponses.count > 0 {
                 if let r = response.subresponses[0] as? Pogoprotos.Networking.Responses.GetMapObjectsResponse {
-                    
                     for cell in r.mapCells {
                         for poke in cell.catchablePokemons {
                             
@@ -103,12 +111,16 @@ class SnipeController: AnyObject, PGoApiDelegate {
                             if poke.pokemonId.toString() == pokemonName {
                                 request.encounterPokemon(poke.encounterId, spawnPointId: poke.spawnPointId)
                                 request.makeRequest(.EncounterPokemon, delegate: self)
+                                
+                                return
                             }
-                            
                         }
                     }
                 }
             }
+            UIAlertView(title: "NO SE HA ENCONTRADO A \(pokemonName)", message: "", delegate: self, cancelButtonTitle: "OK").show()
+            updateLocation(antiqueLatitude, lon: antiqueLongitude)
+            appDelegate.manager.startUpdatingLocation()
         }
         
     }
